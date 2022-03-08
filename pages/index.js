@@ -2,12 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Instagram</title>
       </Head>
 
       <h1> This is landing page for Instagram</h1>
@@ -15,4 +14,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+
