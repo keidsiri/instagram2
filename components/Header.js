@@ -4,14 +4,15 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <h1>Header</h1>
-
+      <div className='flex justify-between max-w-6xl'>
       {/* {Left} */}
-      <div>
-        <Image src='http://links.papareact.com/ocw' layout='fill'/>
+      <div className='relative hidden lg:inline-grid h-24 w-24'>
+        <Image src='http://links.papareact.com/ocw' 
+        layout='fill'
+        objectFit='contain'/>
       </div>
 
-
+      <h1>Hello world</h1>
       {/* {Middle} */}
 
 
@@ -20,7 +21,7 @@ function Header() {
       {/* {Right} */}
 
 
-
+      </div>
     </div>
   );
 }
