@@ -1,6 +1,7 @@
 // import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Header from '../components/Header'
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
         <title>Create Next App</title>
       </Head>
 
-      <h1> This is landing page for Instagram</h1>
+      {/* Header */}
+      <Header  />
     </div>
   )
 }
