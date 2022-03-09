@@ -49,7 +49,8 @@ function Header() {
           <HomeIcon className="h-10 w-10" />
           <MenuIcon className="h-6 md:hidden cursor-pointer" />
 
-          <PaperAirplaneIcon className="h-10 w-10r" />
+          <PaperAirplaneIcon className="navBtn" />
+          <PlusCircleIcon className='navBtn'
         </div>
       </div>
     </div>
