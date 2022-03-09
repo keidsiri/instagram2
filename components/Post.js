@@ -24,7 +24,7 @@ function Post({id, username, userImg, img, caption}) {
 
 
       {/* {button} */}
-      <div>
+      <div className='flex justify-between'> 
         <div className='flex space-x-4'>
           <HeartIcon className='btn' />
           <ChatIcon className='btn'/>
