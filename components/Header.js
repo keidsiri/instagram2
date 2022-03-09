@@ -46,11 +46,17 @@ function Header() {
 
       {/* {Right} */}
         <div className='flex items-center justify-end space-x-4'>
-          <HomeIcon className="h-10 w-10" />
+          <HomeIcon className="h-20 w-20" />
           <MenuIcon className="h-6 md:hidden cursor-pointer" />
 
-          <PaperAirplaneIcon className="navBtn" />
-          <PlusCircleIcon className='navBtn'
+          <div className="relative navBtn">
+            <PaperAirplaneIcon className="navBtn rotate-45" />
+          </div>
+          <PlusCircleIcon className='navBtn' />
+          <UserGroupIcon className='navBtn' />
+          <HeartIcon className='navBtn' />
+
+          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEAaTRGf_fqPA/profile-displayphoto-shrink_800_800/0/1517075879054?e=1652313600&v=beta&t=mPariNtavUGnRgZDtrXXCBwaQPYszxwmte6UxQ9kZ2s" alt="profile pic"  className='h-10 rounded-full cursor-pointer' />
         </div>
       </div>
     </div>
