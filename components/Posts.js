@@ -4,16 +4,16 @@ import Post from './Post';
 const posts = [
   {
     id: "1",
-    username: "FirstOne",
+    username: "Jacob Elordi",
     userImg: "http://links.papareact.com/3ke",
-    img: "http://links.papareact.com/jjm",
+    img: "https://i.insider.com/61a692362ff9830018d5f8fb?width=700",
     caption: "This is the first post for instagram"
   },
   {
     id: "2",
-    username: "secondOne",
+    username: "Jacob Elordi",
     userImg: "http://links.papareact.com/3ke",
-    img: "https://media.wired.com/photos/592676467034dc5f91beb80e/master/pass/MarkZuckerberg.jpg",
+    img: "https://content.api.news/v3/images/bin/355f466658505cf8f53d6eef3623bb60",
     caption: "This is the first post for instagram"
   },
 

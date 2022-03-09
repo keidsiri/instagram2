@@ -7,6 +7,7 @@ import {
   HeartIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
+import { HeartIcon as HeartIconFilled } from '@heroicons/react/solid';
 
 function Post({id, username, userImg, img, caption}) {
   return (
@@ -23,6 +24,11 @@ function Post({id, username, userImg, img, caption}) {
 
 
       {/* {button} */}
+      <div className='flex space-x-4'>
+        <HeartIcon className='btn' />
+        <ChatIcon className='btn'/>
+        <PaperAirplaneIcon className='btn'/>
+      </div>
 
 
       {/* {caption} */}
