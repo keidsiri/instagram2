@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import faker from '@faker-js/faker';
 
 function Stories() {
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
     const suggestions = [...Array(20)].map((_, i) => ({
@@ -10,11 +11,17 @@ function Stories() {
       id: i,
     }));
 
-    console.log(suggestions)
+    setSuggestions(suggestions);
   }, [])
 
   return (
     <div>
+      {suggestions.map(profile => (
+        <Story 
+        key={profile.id} 
+        img={profile.avatar} 
+        username={profile.username} />
+      ))}
       {/* {Stories} */}
       {/* {Stories} */}
       {/* {Stories} */}
