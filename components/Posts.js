@@ -13,7 +13,7 @@ const posts = [
     id: "2",
     username: "secondOne",
     userImg: "http://links.papareact.com/3ke",
-    img: "http://links.papareact.com/jjm",
+    img: "https://images.peekyou.com/4713/9244/jeffrey_schoemaker_471392449.jpg",
     caption: "This is the first post for instagram"
   },
 

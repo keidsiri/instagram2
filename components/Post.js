@@ -11,10 +11,28 @@ import {
 function Post({id, username, userImg, img, caption}) {
   return (
     <div>
+      {/* {Header} */}
       <div>
-        <img src="" alt=""/>
+        <img src={userImg} alt=""/>
         <p>{username}</p>
+        <DotsHorizontalIcon className='h-5' />
       </div>
+
+      {/* {img} */}
+
+
+      {/* {button} */}
+
+
+      {/* {caption} */}
+
+
+      {/* {comment} */}
+
+
+      {/* {input} */}
+
+
     </div>
   )
 }
