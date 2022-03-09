@@ -24,11 +24,16 @@ function Post({id, username, userImg, img, caption}) {
 
 
       {/* {button} */}
-      <div className='flex space-x-4'>
-        <HeartIcon className='btn' />
-        <ChatIcon className='btn'/>
-        <PaperAirplaneIcon className='btn'/>
+      <div>
+        <div className='flex space-x-4'>
+          <HeartIcon className='btn' />
+          <ChatIcon className='btn'/>
+          <PaperAirplaneIcon className='btn'/>
+        </div>
+
+        <BookmarkIcon className='btn' />
       </div>
+    
 
 
       {/* {caption} */}
