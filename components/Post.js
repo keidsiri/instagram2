@@ -1,8 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {
+  BookmarkIcon,
+  ChatIcon,
+  DotsHorizontalIcon,
+  EmojiHappyIcon,
+  HeartIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/react/outline";
 
-function Post() {
+function Post({id, username, userImg, img, caption}) {
   return (
-    <div>Post</div>
+    <div>
+      <div>
+        <img src="" alt=""/>
+        <p>{username}</p>
+      </div>
+    </div>
   )
 }
 
