@@ -12,7 +12,7 @@ function Feed() {
         </section>
         
         <section>
-
+        <MiniProfile />
         {/* {Mini Profile} */}
         {/* {Suggestions} */}
         </section>
