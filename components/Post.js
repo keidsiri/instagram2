@@ -24,7 +24,7 @@ function Post({id, username, userImg, img, caption}) {
 
 
       {/* {button} */}
-      <div className='flex justify-between'> 
+      <div className='flex justify-between px-4 pt-4'> 
         <div className='flex space-x-4'>
           <HeartIcon className='btn' />
           <ChatIcon className='btn'/>
@@ -33,16 +33,23 @@ function Post({id, username, userImg, img, caption}) {
 
         <BookmarkIcon className='btn' />
       </div>
-    
-
 
       {/* {caption} */}
+      <p className='p-5 truncate'>
+        <span className='font-bold m-2'>{username}</span>
+        {caption}
+      </p>
 
 
       {/* {comment} */}
 
 
       {/* {input} */}
+      <form>
+        <EmojiHappyIcon />
+        <input type="text" placeholder="Add comment..." className="border-none flex-1 focus:ring-0 outline-none" >
+        </input>
+      </form>
 
 
     </div>
