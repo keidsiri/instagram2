@@ -9,7 +9,7 @@ function MiniProfile() {
 
       <div className='flex-1 mx-3'>
         <h2 className='font-bold'>Kate Kiatsiri</h2>
-        <h3 className='text-sm text-gray-400'>What's up everyone?</h3>
+        <h3 className='text-sm text-gray-400'>Jr.Software Engineer</h3>
       </div>
 
       <button className='text-blue-400 text-sm font-semibold'>Sign Out</button>
