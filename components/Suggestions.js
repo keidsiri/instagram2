@@ -7,14 +7,13 @@ function Suggestions() {
 
   useEffect(() => {
     const suggestions = [...Array(5)].map((_, i) => (
-      {
-        ...faker.helpers.contextualCard(),
+      {...faker.helpers.contextualCard(),
         id: i
-      }
-    ));
+      }));
 
     setSuggestions(suggestions);
-  })
+  }, [])
+
   return (
     <div className='mt-4 ml-10'>
       <div className='flex justify-between text-sm mb-5'>
@@ -22,11 +21,16 @@ function Suggestions() {
         <button className='text-gray-600 font-semibold'>See All</button>
       </div>
 
-      {suggestions.map((profile) => (
-        <div key={profile.id} className="flex items-center justify-between mt-3">
-          <img src={profile} alt="avatar" className='w-10 h-10 rounded-full border p-[2px]' />
-        </div>
-        ))}
+     {suggestions.map((profile) => (
+       <div key={profile.id} className="flex items-enter justify-between mt-3">
+         <img className='w-10 h-10 rounded-full p-[2px]'
+         src={profile.avatar} alt="Avatar" />
+
+         <div>
+           <h2>{profile.username}</h2>
+         </div>
+       </div>
+     ))}
 
     </div>
   );
