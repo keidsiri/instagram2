@@ -9,8 +9,11 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
+import { useSession } from 'next-auth/react';
 
 function Header() {
+  const {data : session} = useSession(); 
+
   return (
     <div className='shadow-sm border-b bg-white sticky top-0 z-50'>
       <div className='flex justify-between max-w-6xl mx-5 xl:mx-auto'>
@@ -48,6 +51,8 @@ function Header() {
           <HomeIcon className="navBtn" />
           <MenuIcon className="h-6 md:hidden cursor-pointer" />
 
+        
+        
           <div className="relative navBtn">
             <PaperAirplaneIcon className="navBtn rotate-45" />
             <div className='absolute -top-1 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full
@@ -57,7 +62,8 @@ function Header() {
           <UserGroupIcon className='navBtn' />
           <HeartIcon className='navBtn' />
 
-          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEAaTRGf_fqPA/profile-displayphoto-shrink_800_800/0/1517075879054?e=1652313600&v=beta&t=mPariNtavUGnRgZDtrXXCBwaQPYszxwmte6UxQ9kZ2s" alt="profile pic"  className='h-10 rounded-full cursor-pointer' />
+          <img src={session?.user?.image}
+          alt="profile pic"  className='h-10 rounded-full cursor-pointer' />
         </div>
       </div>
     </div>
