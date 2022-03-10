@@ -20,6 +20,8 @@ const posts = [
 ]
 
 function Posts() {
+  const [posts, setPosts] = useState([]);
+  
   return (
     <div>
       {posts.map((post) => (
