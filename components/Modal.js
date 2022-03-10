@@ -14,7 +14,7 @@ function Modal() {
   const [open ,setOpen] = useRecoilState(modalState);
   const filePickerRef = useRef(null);
   const captionRef = useRef(null);
-  const [loading, setLoading] = useSate(false);
+  const [loading, setLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
 
   const uploadPost = async () => {
@@ -37,9 +37,10 @@ function Modal() {
 
     await uploadString(imageRef, selectedFile, "data_url").then(async (snapshot) => {
       const downloadURL = await getDownloadURL(imageRef);
-      await updateDoc(doc(db, "posts" , doc.Ref.id), {
+
+      await updateDoc(doc(db, "posts" , docRef.id), {
         image: downloadURL
-      })
+      });
     });
 
     setOpen(false);
