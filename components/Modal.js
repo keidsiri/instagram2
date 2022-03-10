@@ -3,11 +3,41 @@ import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
 import { Dialog, Transition } from '@headlessui/react'
 import { CameraIcon } from '@heroicons/react/outline';
+import { db, storage } from '../firebase';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { useSession } from 'next-auth/react';
+import { ref } from 'firebase/storage';
 
 function Modal() {
+  const { data: session } = useSession();
   const [open ,setOpen] = useRecoilState(modalState);
-  const filePickerRef = useRef();
+  const filePickerRef = useRef(null);
+  const captionRef = useRef(null);
+  const [loading, setLoading] = useSate(false);
   const [selectedFile, setSelectedFile] = useState(null);
+
+  const uploadPost = async () => {
+    if(loading) return;
+
+    setLoading(true);
+
+    //Create a post and add to firestore 'posts' collection 
+    //2 get the post ID for the newly create post
+    //3 upload the image to firebase storage with the post ID
+    //4 get a download URL from fb storage and update the original post with image
+
+    const docRef = await addDoc(collection(db, 'posts'), {
+      username: session.user.username,
+      caption: captionRef.current.value,
+      profileImg: session.user.image,
+      timestamp: serverTimestamp()
+    })
+    const imageRef = ref(storage, `post/${docRef.id}/image`)
+
+
+  }
+
+
 
   const addImageToPost = (e) => {
     const reader = new FileReader();
@@ -54,14 +84,14 @@ function Modal() {
               <img 
               src={selectedFile} 
               className="w-full object-contain cursor-pointer"
-              onClick={() => setSelectedFile(null)} alt="" />
-            ): (
+              onClick={() => setSelectedFile(null)} 
+              alt="" />
+            ) : (
               <div 
-            onClick={() => filePickerRef.current.click()} 
-            className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer">
-              <CameraIcon className='h-6 w-6 text-red-600' aria-hidden='true' />
-            </div>
-
+                onClick={() => filePickerRef.current.click()} 
+                className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer">
+                  <CameraIcon className='h-6 w-6 text-red-600' aria-hidden='true' />
+              </div>
             )}
             
             <div>
@@ -82,7 +112,7 @@ function Modal() {
                 <div className='mt-2'>
                   <input className='border-none focus:ring-0 w-full text-center'
                   type="text"
-                  //ref={captionRef}
+                  ref={captionRef}
                   placeholder='Please enter a caption...'
                   />
                 </div>
