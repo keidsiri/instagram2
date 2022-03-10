@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { signOut , useSession } from "next-auth/react";
 function MiniProfile() {
   return (
     <div className='flex items-center justify-between mt-14 ml-10'>

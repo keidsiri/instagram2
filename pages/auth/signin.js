@@ -41,4 +41,4 @@ export default signIn;
 
 // instagram https://links.papareact.com/ocw
 // drinking buddy logo https://cdn.shopify.com/s/files/1/0056/7961/1975/products/Screen_Shot_2019-05-10_at_2.42.06_PM_1200x.png?v=1557517441
-//  {callbackUrl: '/'} back to the hompage
+//  {callbackUrl: '/'} back to the homepage
