@@ -34,9 +34,7 @@ function Modal() {
     })
     const imageRef = ref(storage, `post/${docRef.id}/image`)
 
-
   }
-
 
 
   const addImageToPost = (e) => {
